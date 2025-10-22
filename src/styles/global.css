@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+
+@theme {
+    --color-richBlack: #0d1f2dff;
+    --color-pacificCyan: #23b5d3ff;
+    --color-moonstone: #75abbcff;
+    --color-cadetGray: #a2aebbff;
+    --color-platinum: #dfe0e2ff;
+}

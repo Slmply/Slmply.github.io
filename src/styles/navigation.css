@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@import "./global.css";
+
+.menuItem {
+  @apply px-4 text-sm text-center items-center font-medium no-underline text-white transition-all mt-0 mb-0 h-full justify-center flex [clip-path:polygon(10%_0%,100%_0%,90%_100%,0%_100%)];
+}
+
+/* keep the clip-path hover in plain CSS (Tailwind can't @apply arbitrary clip-path) */
+.menuItem:hover {
+    @apply bg-moonstone  text-white [clip-path:polygon(10%_0%,100%_0%,90%_100%,0%_100%)];
+  /* clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%); */
+}
+

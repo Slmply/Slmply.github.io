@@ -1,0 +1,14 @@
+---
+import "../styles/navigation.css";
+const { pageTitle } = Astro.props;
+---
+<div class="flex w-screen bg-richBlack text-white m-0 p-0">
+    <div class="text-center align-middle justify-center font-bold p-4 bg-moonstone height-fit mt-0 mb-0 pr-8 [clip-path:polygon(0%_0%,100%_0%,90%_100%,0%_100%)]">
+        <h1 class="">{pageTitle}</h1>
+    </div>
+    <div class="flex mr-4 ml-auto items-center h-fill">
+        <a href="/" class="menuItem">Home</a>
+        <a href="/about/" class="menuItem">About</a>
+        <a href="/projects" class="menuItem">Projects</a>
+    </div>
+</div>
