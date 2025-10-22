@@ -7,4 +7,11 @@
     --color-moonstone: #75abbcff;
     --color-cadetGray: #a2aebbff;
     --color-platinum: #dfe0e2ff;
+
+    --default-font-family: tahoma, sans-serif;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
 }
