@@ -1,0 +1,12 @@
+---
+import ProjectCard from './project-card.astro';
+
+const { projects } = Astro.props;
+---
+<div class="h-full w-full flex-row overflow-x-auto scrollbar-hide flex">
+    <ul class="flex flex-row w-max">
+        {projects.map((post: any) => (
+            <ProjectCard post={post} />
+        ))}
+    </ul>
+</div>

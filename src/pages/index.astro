@@ -1,22 +1,23 @@
 ---
-import Navigation from '../components/navigation.astro';
 import BaseLayout from '../layouts/base-layout.astro';
+import ProjectCarousel from '../components/project-carousel.astro';
 
 const allPosts = Object.values(import.meta.glob('./projects/*.md', { eager: true }));
+
+const latest = allPosts.sort((a: any, b: any) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime()).slice(0, 5);
 ---
 <BaseLayout pageTitle="Home">
-    <div class="flex flex-col w-full h-full gap-8">
-        <div class="bg-moonstone p-8 mb-8 h-1/2 justify-center align-baseline flex flex-col gap-4 w-full [clip-path:polygon(0%_0%,100%_0%,100%_80%,0%_100%)]">
-            <h1 class="text-2xl font-bold">Welcome to my Portfolio (Kinda)!</h1>
-            <a href="/about/">Learn More</a>
+    <div class="flex flex-col w-full h-full">
+        <div class="bg-moonstone p-8 h-84 justify-center align-baseline flex flex-col gap-4 w-full [clip-path:polygon(0%_0%,100%_0%,100%_80%,0%_100%)]">
+            <h1 class="text-4xl font-bold">Welcome!</h1>
+            <h2 class="text-2xl font-light">My name is <i><b>Casey Groff.</b></i> This is somewhat a portfolio.</h2>
+            <a href="/about/" class="mr-auto p-2 px transition-all hover:text-white hover:bg-richBlack hover:shadow-2xl [clip-path:polygon(10%_0%,100%_0%,90%_100%,0%_100%)] hover:px-4 hover:underline">Learn More</a>
         </div>
     <div>
-        <h2>Projects</h2>
-        <ul>
-            {allPosts.map((post: any) => (
-                <li><a href={post.url}>{post.frontmatter.title}</a></li>
-            ))}
-        </ul>
+        <div class="-mt-12 p-4 mr-auth shadow-md flex h-18 w-84 bg-richBlack text-white align-center justify-baseline [clip-path:polygon(0%_0%,100%_0%,90%_100%,0%_100%)]">
+            <h2 class="text-2xl">Latest Projects</h2>
+        </div>
+        <ProjectCarousel projects={latest}/>
     </div>
     </div>
 </BaseLayout>

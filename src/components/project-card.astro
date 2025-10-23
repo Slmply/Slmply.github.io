@@ -1,0 +1,14 @@
+---
+const { post } = Astro.props;
+---
+<li class="bg-cadetGray m-4 shadow-lg w-64 max-h-48 hover:max-h-120 hover:border-2 hover:border-black overflow-hidden transition-all">
+    <a href={ post.url } class="group">
+        <div class="bg-richBlack p-4 text-white flex justify-center align-center font-bold h-14">
+            <h2>{post.frontmatter.title}</h2>
+        </div>
+        <img src={post.frontmatter.image.url} alt={post.frontmatter.image.alt} class="w-full h-34 object-cover flex"/>
+        <div class="p-4 italic max-h-14 overflow-hidden transition-all duration-300 group-hover:max-h-64 group-hover:overflow-auto">
+            <p>{post.frontmatter.description}</p>
+        </div>
+    </a>
+</li>
