@@ -14,7 +14,7 @@ const latest = allPosts.sort((a: any, b: any) => new Date(b.pubDate).getTime() -
             <a href="/about/" class="mr-auto p-2 px transition-all hover:text-white hover:bg-richBlack hover:shadow-2xl [clip-path:polygon(10%_0%,100%_0%,90%_100%,0%_100%)] hover:px-4 hover:underline">Learn More</a>
         </div>
     <div>
-        <div class="-mt-12 p-4 mr-auth shadow-md flex h-18 w-84 bg-richBlack text-white align-center justify-baseline [clip-path:polygon(0%_0%,100%_0%,90%_100%,0%_100%)]">
+        <div class="-mt-12 p-4 mr-auth shadow-md flex h-18 w-84 bg-richBlack text-white align-center items-center justify-baseline [clip-path:polygon(0%_0%,100%_0%,90%_100%,0%_100%)]">
             <h2 class="text-2xl">Latest Projects</h2>
         </div>
         <ProjectCarousel projects={latest}/>

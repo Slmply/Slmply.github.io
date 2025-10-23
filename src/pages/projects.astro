@@ -1,15 +1,18 @@
 ---
-import Navigation from '../components/navigation.astro';
 import BaseLayout from '../layouts/base-layout.astro';
+import ProjectCard from '../components/project-card.astro';
 
-const allPosts = Object.values(import.meta.glob('./projects/*.md', { eager: true }));
+const allPosts = Object.values(import.meta.glob('./projects/*.md', { eager: true })).sort((a: any, b: any) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
+
 ---
 <body>
     <BaseLayout pageTitle="Projects">
-        <h2>Projects</h2>
-        <ul>
+        <div class="mt-4 p-4 mr-auth shadow-md flex h-18 w-84 bg-richBlack text-white align-center items-center justify-baseline [clip-path:polygon(0%_0%,100%_0%,90%_100%,0%_100%)]">
+            <h1 class="text-2xl">All Projects</h1>
+        </div>
+         <ul class="p-4 gap-4 w-full grid grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] justify-center place-items-start">
             {allPosts.map((post: any) => (
-                <li><a href={post.url}>{post.frontmatter.title}</a></li>
+                <ProjectCard post={post} />
             ))}
         </ul>
     </BaseLayout>

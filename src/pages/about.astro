@@ -3,7 +3,19 @@ import Navigation from '../components/navigation.astro';
 import BaseLayout from '../layouts/base-layout.astro';
 ---
 <BaseLayout pageTitle="About">
-    <h1>About</h1>
-    <h2>Hi, I'm Casey</h2>
-    <p>I'm a student at the University of Wisconsin: Madison, Majoring in Computer Sciences.  In this site, you will find many small projects I have completed in my free time to deepen my understanding of Programming, Math, Physics, and More.  I hope you find my research interesting, and are inspired to learn more about these topics yourself!</p>
+    <div class="flex flex-col">
+        <div class="mt-4 p-4 mr-auth shadow-md flex h-18 w-84 bg-richBlack text-white align-center items-center justify-baseline [clip-path:polygon(0%_0%,100%_0%,90%_100%,0%_100%)]">
+            <h1 class="text-2xl">About This Site</h1>
+        </div>
+        <div class="p-4 gap-4 max-w-3xl">
+            <p>This site was built using the Astro Framework, along with TailwindCSS for styling.
+            The purpose of this site is to showcase various small projects I have completed
+            in my free time to further my understanding of programming, math, physics, and more.
+            Take your time to explore the projects and feel free to reach out if you have any questions (Or Suggestions)!
+            </p>
+            <p>I try to complete a new project once per week in order to keep my skills sharp and continue
+                learning new things.  Feel free to check back often for new projects!
+            </p>
+        </div>
+    </div>
 </BaseLayout>

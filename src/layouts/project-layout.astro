@@ -5,9 +5,18 @@ const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={"Projects: " + frontmatter.title}>
     <div>
-        <h2>{frontmatter.title}</h2>
-        <p>{frontmatter.description}</p>
-        <p>{frontmatter.pubDate.toString().slice(0,10)}</p>
+        <div class="relative w-84 mt-4">
+            <div class=" p-4 mr-auth shadow-md flex h-18 bg-richBlack text-white align-center items-center justify-baseline [clip-path:polygon(0%_0%,100%_0%,90%_100%,0%_100%)]">
+                <h2>{frontmatter.title}</h2>
+            </div>
+            <time datetime={frontmatter.pubDate} class="absolute bottom-2 right-2 m-0 px-2 py-1 bg-moonstone text-white text-sm rounded" aria-label={`Published ${frontmatter.pubDate}`}>
+                {frontmatter.pubDate.toString().slice(0,10)}
+            </time>
+        </div >
+        <div class="prose max-w-3xl p-4">
+            <p>{frontmatter.description}</p>
+        <div/>
+        <img src={frontmatter.image.url} alt={frontmatter.image.alt} class="w-full max-h-64 flex border-2 shadow-md"/>
+        <slot />
     </div>
-    <slot />
 </BaseLayout>

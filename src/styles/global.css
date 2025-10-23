@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@plugin '@tailwindcss/typography';
 
 @theme {
     --color-richBlack: #0d1f2dff;
@@ -9,4 +9,12 @@
     --color-platinum: #dfe0e2ff;
 
     --default-font-family: tahoma, sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--default-font-family);
+    background-color: var(--color-platinum);
+    color: var(--color-richBlack);
 }
