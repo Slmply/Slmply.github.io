@@ -8,13 +8,13 @@ const latest = allPosts.sort((a: any, b: any) => new Date(b.pubDate).getTime() -
 ---
 <BaseLayout pageTitle="Home">
     <div class="flex flex-col w-full h-full">
-        <div class="bg-moonstone p-8 h-84 justify-center align-baseline flex flex-col gap-4 w-full [clip-path:polygon(0%_0%,100%_0%,100%_80%,0%_100%)]">
+        <div class="bg-moonstone p-8 h-84 justify-center align-baseline flex flex-col gap-4 w-full border-b-2">
             <h1 class="text-4xl font-bold">Welcome!</h1>
-            <h2 class="text-2xl font-light">My name is <i><b>Casey Groff.</b></i> This is somewhat a portfolio.</h2>
-            <a href="/about/" class="mr-auto p-2 px transition-all hover:text-white hover:bg-richBlack hover:shadow-2xl [clip-path:polygon(10%_0%,100%_0%,90%_100%,0%_100%)] hover:px-4 hover:underline">Learn More</a>
+            <h2 class="text-2xl">My name is <b>Casey Groff</b>. This is what I've been working on.</h2>
+            <a href="/about/" class="mr-auto p-2 px shadow-md transition-all hover:text-white hover:bg-richBlack hover:px-4 hover:underline">Learn More</a>
         </div>
     <div>
-        <div class="-mt-12 p-4 mr-auth shadow-md flex h-18 w-84 bg-richBlack text-white align-center items-center justify-baseline [clip-path:polygon(0%_0%,100%_0%,90%_100%,0%_100%)]">
+        <div class="-mt-12 p-4 mr-auto shadow-md border-2 border-richBlack border-l-0 flex h-18 w-84 bg-richBlack text-white align-center items-center justify-baseline">
             <h2 class="text-2xl">Latest Projects</h2>
         </div>
         <ProjectCarousel projects={latest}/>

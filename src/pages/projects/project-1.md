@@ -5,7 +5,7 @@ pubDate: 2024-10-22
 description: 'Created this very site, while learning about Tailwind & the Astro Framework'
 topics: ["astro", "HTML", "TailwindCSS", "Markdown"]
 image:
-    url: '/public/favicon.svg'
+    url: 'https://astro.build/assets/press/astro-logo-dark.svg'
     alt: 'The Astro logo on a dark background with a pink glow.'
 ---
 

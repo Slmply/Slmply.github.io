@@ -5,18 +5,22 @@ const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={"Projects: " + frontmatter.title}>
     <div>
-        <div class="relative w-84 mt-4">
-            <div class=" p-4 mr-auth shadow-md flex h-18 bg-richBlack text-white align-center items-center justify-baseline [clip-path:polygon(0%_0%,100%_0%,90%_100%,0%_100%)]">
-                <h2>{frontmatter.title}</h2>
+        <div class="bg-moonstone p-8 max-h-42 shadow-md justify-center align-baseline flex gap-4 w-full border-b-2">
+            <div class="flex flex-col flex-1 justify-center">
+                <div class="flex gap-4 items-center m-auto ml-0 flex-1">
+                    <h1 class="text-4xl font-bold">{frontmatter.title}</h1>
+                    <time datetime={frontmatter.pubDate} class="m-0 px-2 py-1 bg-richBlack text-white text-sm" aria-label={`Published ${frontmatter.pubDate}`}>
+                    {frontmatter.pubDate.toString().slice(0,10)}
+                    </time>
+                </div>
+                <p>{frontmatter.description}</p>
             </div>
-            <time datetime={frontmatter.pubDate} class="absolute bottom-2 right-2 m-0 px-2 py-1 bg-moonstone text-white text-sm rounded" aria-label={`Published ${frontmatter.pubDate}`}>
-                {frontmatter.pubDate.toString().slice(0,10)}
-            </time>
-        </div >
-        <div class="prose max-w-3xl p-4">
-            <p>{frontmatter.description}</p>
+            <div class="m-auto bg-platinum">
+                <img src={frontmatter.image.url} alt={frontmatter.image.alt} class="m-auto border-2 shadow-md object-cover h-53 max-w-full"/>
+            </div>
+        </div>
+        <div class="prose lg:prose-xl max-w-3/4 p-8">
+             <slot />
         <div/>
-        <img src={frontmatter.image.url} alt={frontmatter.image.alt} class="w-full max-h-64 flex border-2 shadow-md object-cover"/>
-        <slot />
     </div>
 </BaseLayout>

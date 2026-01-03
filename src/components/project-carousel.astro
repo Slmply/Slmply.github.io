@@ -1,5 +1,6 @@
 ---
 import ProjectCard from './project-card.astro';
+import MoreProjectsCard from './more-projects-card.astro';
 
 const { projects } = Astro.props;
 ---
@@ -8,5 +9,6 @@ const { projects } = Astro.props;
         {projects.map((post: any) => (
             <ProjectCard post={post} />
         ))}
+        <MoreProjectsCard />
     </ul>
 </div>

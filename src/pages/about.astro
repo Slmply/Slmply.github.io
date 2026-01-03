@@ -3,19 +3,19 @@ import Navigation from '../components/navigation.astro';
 import BaseLayout from '../layouts/base-layout.astro';
 ---
 <BaseLayout pageTitle="About">
+
     <div class="flex flex-col">
-        <div class="mt-4 p-4 mr-auth shadow-md flex h-18 w-84 bg-richBlack text-white align-center items-center justify-baseline [clip-path:polygon(0%_0%,100%_0%,90%_100%,0%_100%)]">
-            <h1 class="text-2xl">About This Site</h1>
+        <div class="bg-moonstone p-8 max-h-42 shadow-md justify-center align-baseline flex gap-4 w-full border-b-2">
+            <h1 class="text-4xl font-bold m-auto ml-0">About Me</h1>
         </div>
-        <div class="p-4 gap-4 max-w-3xl">
-            <p>This site was built using the Astro Framework, along with TailwindCSS for styling.
-            The purpose of this site is to showcase various small projects I have completed
-            in my free time to further my understanding of programming, math, physics, and more.
-            Take your time to explore the projects and feel free to reach out if you have any questions (Or Suggestions)!
-            </p>
-            <p>I try to complete a new project once per week in order to keep my skills sharp and continue
-                learning new things.  Feel free to check back often for new projects!
-            </p>
+        <div class="p-4 gap-8 flex-col max-w-3xl h-full">
+            <h1 class="text-xl font-bold">Who am I?</h1>
+            <p>My name is Casey Groff.  Im currently studying Computer Science at the University of Wisconsin-Madison.</p>
+            <h1 class="text-xl font-bold">Why are you here?</h1>
+            <p>Now thats a great question!  I use this site to document my progress and share my projects with the world.  You must be interested in seeing that progress!</p>
+            <h1 class="text-xl font-bold">What kind of projects do you work on?</h1>
+            <p>I work on a variety of projects, but my major passions are software and game development.  You'll often see updates about what I've been learning or working on in here!</p>
+
         </div>
     </div>
 </BaseLayout>

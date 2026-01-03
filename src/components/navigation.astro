@@ -3,10 +3,10 @@ import "../styles/navigation.css";
 const { pageTitle } = Astro.props;
 ---
 <div class="flex w-screen bg-richBlack text-white m-0 p-0 border-b-2 border-richBlack shadow-sm shadow-black fixed top-0 z-10 h-16">
-    <div class="flex text-center align-middle justify-center items-center font-bold p-4 bg-moonstone height-fit mt-0 mb-0 pr-8 [clip-path:polygon(0%_0%,100%_0%,90%_100%,0%_100%)]">
-        <h1 class="m-auto">{pageTitle}</h1>
+    <div class="flex text-center align-middle justify-center items-center text-xl font-bold pl-8 height-fit mt-0 mb-0 overflow-hidden">
+        <h1 class="m-auto whitespace-nowrap">{pageTitle}</h1>
     </div>
-    <div class="flex mr-4 ml-auto items-center h-fill">
+    <div class="flex m-auto mr-8 items-center h-fill">
         <a href="/" class="menuItem">Home</a>
         <a href="/about/" class="menuItem">About</a>
         <a href="/projects" class="menuItem">Projects</a>
