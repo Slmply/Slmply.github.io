@@ -2,7 +2,7 @@
 layout: '../../layouts/project-layout.astro'
 title: 'Beginners Jam Winter 2025'
 pubDate: 2026-01-03
-description: 'Participated in a Game Jam'
+description: 'Completed the Beginners Jam Winter 2025'
 topics: ['Game', 'Game-Jam', 'Gamedev']
 image:
     url: 'https://img.itch.zone/aW1nLzI0ODIzMzc3LnBuZw==/315x250%23c/huT2P3.png'

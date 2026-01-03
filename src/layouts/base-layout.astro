@@ -1,5 +1,6 @@
 ---
 import Navigation from "../components/navigation.astro";
+import Footer from "../components/footer.astro";
 import '../styles/global.css';
 
 const { pageTitle } = Astro.props;
@@ -11,13 +12,14 @@ const { pageTitle } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <script src="https://kit.fontawesome.com/e2a0a4c47b.js" crossorigin="anonymous"></script>
     <title>{pageTitle}</title>
   </head>
   <body>
-    <!-- <h1>{pageTitle}</h1> -->
     <Navigation pageTitle={pageTitle}/>
-    <div class="pt-16 h-full w-full">
+    <div class="pt-16 min-h-dvh">
       <slot />
     </div>
+    <Footer />
   </body>
 </html>
